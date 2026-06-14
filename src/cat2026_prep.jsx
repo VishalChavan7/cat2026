@@ -943,7 +943,7 @@ function Hero({ setActive }) {
               alignItems: "center",
               gap: 10,
               flexWrap: "wrap",
-              marginBottom: 18,
+              marginTop: 18,
             }}
           >
             <div
@@ -2680,13 +2680,7 @@ function WordCard({ word, dayKey, idx }) {
 
 // ── SHARED UI ─────────────────────────────────────────────────────────────
 function PageWrap({ children }) {
-  return (
-    <div
-      className="page-wrap animate-fade-in-up"
-    >
-      {children}
-    </div>
-  );
+  return <div className="page-wrap animate-fade-in-up">{children}</div>;
 }
 function PageHeader({ label, title, sub }) {
   return (
