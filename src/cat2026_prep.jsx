@@ -751,6 +751,7 @@ function Nav({ active, setActive }) {
       }}
     >
       <nav
+        className="nav-bar"
         style={{
           pointerEvents: "auto",
           background: "rgba(255, 255, 255, 0.22)",
@@ -847,12 +848,11 @@ function Hero({ setActive }) {
     return (
       <div style={{ textAlign: "center", flex: 1 }}>
         <div
+          className="countdown-seg-box"
           style={{
             background: "#1A1209",
             color: "#FAF7F2",
             borderRadius: 12,
-            padding: "18px 10px",
-            fontSize: "clamp(28px, 3.8vw, 48px)",
             fontWeight: 900,
             lineHeight: 1,
             letterSpacing: "-0.02em",
@@ -883,12 +883,11 @@ function Hero({ setActive }) {
   function Colon() {
     return (
       <div
+        className="countdown-colon"
         style={{
-          fontSize: "clamp(22px, 3vw, 36px)",
           fontWeight: 900,
           color: "#D4A574",
           lineHeight: 1.8,
-          paddingBottom: 18,
         }}
       >
         :
@@ -898,6 +897,7 @@ function Hero({ setActive }) {
 
   return (
     <div
+      className="hero-container"
       style={{
         position: "relative",
         flex: 1,
@@ -913,6 +913,7 @@ function Hero({ setActive }) {
 
       {/* Two-column main layout */}
       <div
+        className="hero-main-layout"
         style={{
           position: "relative",
           zIndex: 2,
@@ -926,6 +927,7 @@ function Hero({ setActive }) {
       >
         {/* LEFT: Identity + headline + quote */}
         <div
+          className="hero-left-col"
           style={{
             flex: 1,
             minWidth: 0,
@@ -935,6 +937,7 @@ function Hero({ setActive }) {
         >
           {/* Date + greeting row */}
           <div
+            className="hero-greeting-row"
             style={{
               display: "flex",
               alignItems: "center",
@@ -944,7 +947,7 @@ function Hero({ setActive }) {
             }}
           >
             <div
-              className="animate-fade-in-up"
+              className="hero-date-pill animate-fade-in-up"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -980,7 +983,7 @@ function Hero({ setActive }) {
               </span>
             </div>
             <div
-              className="animate-fade-in-up"
+              className="hero-greeting animate-fade-in-up"
               style={{
                 display: "inline-block",
                 background: "rgba(196,136,74,0.12)",
@@ -1000,12 +1003,12 @@ function Hero({ setActive }) {
           </div>
           {/* Headline */}
           <h1
+            className="hero-headline"
             style={{
               fontFamily: "'Google Sans Display','Google Sans',sans-serif",
               fontSize: "clamp(40px, 5.5vw, 72px)",
               fontWeight: 900,
               color: "#1A1209",
-              marginTop: 150,
               lineHeight: 1.1,
               letterSpacing: "-0.04em",
               position: "relative",
@@ -1053,7 +1056,7 @@ function Hero({ setActive }) {
 
           {/* Subtitle — snug below headline, not floating */}
           <p
-            className="animate-fade-in-up"
+            className="hero-subtitle animate-fade-in-up"
             style={{
               color: "#6B5744",
               fontSize: 15,
@@ -1069,11 +1072,10 @@ function Hero({ setActive }) {
 
           {/* Quote — pinned to bottom */}
           <div
-            className="animate-fade-in-up"
+            className="hero-quote animate-fade-in-up"
             style={{
               borderLeft: "3px solid #C4884A",
               paddingLeft: 16,
-              marginTop: "auto",
               paddingTop: 4,
               animationDelay: "0.45s",
               animationFillMode: "forwards",
@@ -1108,6 +1110,7 @@ function Hero({ setActive }) {
 
         {/* RIGHT: Countdown + Progress stacked */}
         <div
+          className="hero-right-col"
           style={{
             width: "min(500px, 46%)",
             flexShrink: 0,
@@ -1118,14 +1121,13 @@ function Hero({ setActive }) {
         >
           {/* Countdown HUD */}
           <div
-            className="animate-fade-in-up hover-lift"
+            className="hud-card animate-fade-in-up hover-lift"
             style={{
               background: "rgba(255, 255, 255, 0.72)",
               backdropFilter: "blur(20px)",
               WebkitBackdropFilter: "blur(20px)",
               border: "1.5px solid #EDE4D8",
               borderRadius: 20,
-              padding: "22px 26px",
               boxShadow: "0 10px 30px rgba(124, 74, 30, 0.03)",
               animationDelay: "0.3s",
               animationFillMode: "forwards",
@@ -1197,14 +1199,13 @@ function Hero({ setActive }) {
 
           {/* Progress HUD */}
           <div
-            className="animate-fade-in-up hover-lift"
+            className="hud-card animate-fade-in-up hover-lift"
             style={{
               background: "rgba(255, 255, 255, 0.72)",
               backdropFilter: "blur(20px)",
               WebkitBackdropFilter: "blur(20px)",
               border: "1.5px solid #EDE4D8",
               borderRadius: 20,
-              padding: "22px 26px",
               boxShadow: "0 10px 30px rgba(124, 74, 30, 0.03)",
               textAlign: "left",
               animationDelay: "0.4s",
@@ -1252,6 +1253,7 @@ function Hero({ setActive }) {
 
             {/* Ring + stats row */}
             <div
+              className="ring-stats-row"
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -1370,6 +1372,7 @@ function Hero({ setActive }) {
               >
                 <div>
                   <div
+                    className="stat-num"
                     style={{
                       fontSize: 28,
                       fontWeight: 900,
@@ -1394,6 +1397,7 @@ function Hero({ setActive }) {
                 <div style={{ height: 1, background: "#EDE4D8" }} />
                 <div>
                   <div
+                    className="stat-num"
                     style={{
                       fontSize: 28,
                       fontWeight: 900,
@@ -1457,6 +1461,7 @@ function Hero({ setActive }) {
 
       {/* Footer bar */}
       <div
+        className="hero-footer"
         style={{
           position: "absolute",
           bottom: 0,
@@ -1696,6 +1701,7 @@ function VARCSection() {
                   {qi + 1}. {q.text}
                 </p>
                 <div
+                  className="options-grid"
                   style={{
                     display: "grid",
                     gridTemplateColumns: "1fr 1fr",
@@ -1820,7 +1826,7 @@ function VARCSection() {
 
       {/* Score Tracker Card */}
       <div
-        className="hover-lift progress-card-effect"
+        className="score-tracker-card hover-lift progress-card-effect"
         style={{
           background: "#FFFDF9",
           border: "1px solid #D4A574",
@@ -1863,6 +1869,7 @@ function VARCSection() {
 
         {history.length > 0 && (
           <div
+            className="score-history-col"
             style={{
               borderLeft: "1px solid #EDE4D8",
               paddingLeft: 24,
@@ -2090,6 +2097,7 @@ function SyllabusSection() {
                 })}
               </div>
               <span
+                className="syllabus-hover-hint"
                 style={{
                   fontSize: 11,
                   color: "#C4884A",
@@ -2562,6 +2570,7 @@ function WordCard({ word, dayKey, idx }) {
             {[0, 1, 2, 3, 4].map((i) => (
               <div key={i} style={{ marginBottom: 14 }}>
                 <div
+                  className="practice-row"
                   style={{
                     display: "flex",
                     gap: 8,
@@ -2670,8 +2679,7 @@ function WordCard({ word, dayKey, idx }) {
 function PageWrap({ children }) {
   return (
     <div
-      className="animate-fade-in-up"
-      style={{ maxWidth: 1040, margin: "0 auto", padding: "64px 32px 100px" }}
+      className="page-wrap animate-fade-in-up"
     >
       {children}
     </div>
@@ -2766,6 +2774,7 @@ export default function App() {
 
   return (
     <div
+      className="app-container"
       style={{
         fontFamily: "'Google Sans','Segoe UI',system-ui,sans-serif",
         background: "#FAF7F2",
@@ -2988,6 +2997,155 @@ export default function App() {
         .word-details-inner {
           min-height: 0;
           overflow: hidden;
+        }
+
+        /* Responsiveness & Media Queries */
+        .page-wrap {
+          max-width: 1040px;
+          margin: 0 auto;
+          padding: 64px 32px 100px;
+        }
+        .hero-headline {
+          margin-top: 150px;
+        }
+        .hero-quote {
+          margin-top: auto;
+        }
+
+        @media (max-width: 900px) {
+          .app-container {
+            height: auto !important;
+            overflow: visible !important;
+          }
+          .hero-container {
+            height: auto !important;
+            overflow: visible !important;
+          }
+          .hero-main-layout {
+            flex-direction: column !important;
+            padding: 20px 20px 30px !important;
+            align-items: stretch !important;
+            gap: 28px !important;
+          }
+          .hero-headline {
+            margin-top: 24px !important;
+          }
+          .hero-quote {
+            margin-top: 36px !important;
+            margin-bottom: 20px !important;
+          }
+          .hero-right-col {
+            width: 100% !important;
+            max-width: 400px !important;
+            margin: 0 auto !important;
+          }
+          .hero-footer {
+            position: static !important;
+            padding: 16px 20px !important;
+            background: #FAF7F2 !important;
+            justify-content: center !important;
+            border-top: 1px solid #EDE4D8 !important;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .syllabus-flip-card {
+            height: auto !important;
+            perspective: none !important;
+          }
+          .syllabus-flip-card-inner {
+            transform: none !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 16px !important;
+          }
+          .syllabus-flip-card-front, .syllabus-flip-card-back {
+            position: static !important;
+            height: auto !important;
+            transform: none !important;
+            backface-visibility: visible !important;
+            padding: 24px 20px !important;
+          }
+          .syllabus-flip-card-back {
+            transform: none !important;
+          }
+          .syllabus-hover-hint {
+            display: none !important;
+          }
+        }
+
+        /* Default HUD and Countdown classes */
+        .hud-card {
+          padding: 22px 26px;
+        }
+        .countdown-seg-box {
+          padding: 18px 10px;
+          font-size: clamp(28px, 3.8vw, 48px);
+        }
+        .countdown-colon {
+          font-size: clamp(22px, 3vw, 36px);
+          padding-bottom: 18px;
+        }
+
+        @media (max-width: 600px) {
+          .page-wrap {
+            padding: 32px 16px 80px !important;
+            max-width: 480px !important;
+            margin: 0 auto !important;
+          }
+          .options-grid {
+            grid-template-columns: 1fr !important;
+          }
+          .score-tracker-card {
+            flex-direction: column !important;
+            align-items: stretch !important;
+            gap: 16px !important;
+          }
+          .score-history-col {
+            border-left: none !important;
+            padding-left: 0 !important;
+            border-top: 1px solid #EDE4D8 !important;
+            padding-top: 20px !important;
+          }
+          .ring-stats-row {
+            flex-direction: column !important;
+            align-items: center !important;
+            text-align: center !important;
+            gap: 16px !important;
+          }
+        }
+
+        @media (max-width: 500px) {
+          .nav-bar {
+            width: calc(100% - 32px) !important;
+            max-width: 450px !important;
+            margin: 0 auto !important;
+          }
+          .nav-bar button {
+            padding: 6px 10px !important;
+            font-size: 11px !important;
+            flex: 1 !important;
+            text-align: center !important;
+          }
+          .practice-row {
+            flex-direction: column !important;
+            align-items: stretch !important;
+            gap: 8px !important;
+          }
+          .practice-row button {
+            align-self: flex-end !important;
+          }
+          .hud-card {
+            padding: 16px 16px !important;
+          }
+          .countdown-seg-box {
+            padding: 12px 6px !important;
+            font-size: clamp(20px, 3.8vw, 32px) !important;
+          }
+          .countdown-colon {
+            font-size: 20px !important;
+            padding-bottom: 8px !important;
+          }
         }
       `}</style>
       <Nav active={active} setActive={go} />
