@@ -1625,7 +1625,7 @@ function VARCSection() {
     if (!rc) return null;
     return (
       <div
-        className="hover-lift"
+        className="rc-card hover-lift"
         style={{
           background: "#FFFDF9",
           border: "1px solid #D9CFC0",
@@ -1659,8 +1659,9 @@ function VARCSection() {
             {rc.genre}
           </span>
         </div>
-        <div style={{ padding: "26px 28px 8px" }}>
+        <div className="rc-card-content" style={{ padding: "26px 28px 8px" }}>
           <p
+            className="rc-passage-text"
             style={{
               fontSize: 15,
               lineHeight: 1.88,
@@ -2468,6 +2469,7 @@ function WordCard({ word, dayKey, idx }) {
       }}
     >
       <div
+        className="word-card-header"
         style={{
           padding: "16px 22px",
           cursor: "pointer",
@@ -2538,8 +2540,9 @@ function WordCard({ word, dayKey, idx }) {
       </div>
       <div className={`word-details ${open ? "open" : ""}`}>
         <div className="word-details-inner">
-          <div style={{ padding: "18px 22px" }}>
+          <div className="word-card-details" style={{ padding: "18px 22px" }}>
             <div
+              className="word-card-example"
               style={{
                 background: "#FAF0E0",
                 border: "1px solid #DDC8A0",
@@ -3023,7 +3026,7 @@ export default function App() {
           }
           .hero-main-layout {
             flex-direction: column !important;
-            padding: 20px 20px 30px !important;
+            padding: 42px 20px 30px !important;
             align-items: stretch !important;
             gap: 28px !important;
           }
@@ -3036,7 +3039,7 @@ export default function App() {
           }
           .hero-right-col {
             width: 100% !important;
-            max-width: 400px !important;
+            max-width: 350px !important;
             margin: 0 auto !important;
           }
           .hero-footer {
@@ -3045,6 +3048,25 @@ export default function App() {
             background: #FAF7F2 !important;
             justify-content: center !important;
             border-top: 1px solid #EDE4D8 !important;
+          }
+          .hud-card {
+            padding: 16px 16px !important;
+            flex: none !important;
+          }
+          .countdown-seg-box {
+            padding: 10px 4px !important;
+            font-size: clamp(18px, 3.5vw, 24px) !important;
+            border-radius: 8px !important;
+          }
+          .countdown-colon {
+            font-size: 16px !important;
+            padding-bottom: 4px !important;
+          }
+          .rc-card-content {
+            padding: 16px 14px 8px !important;
+          }
+          .rc-passage-text {
+            padding: 14px 16px !important;
           }
         }
 
@@ -3089,8 +3111,8 @@ export default function App() {
 
         @media (max-width: 600px) {
           .page-wrap {
-            padding: 32px 16px 80px !important;
-            max-width: 480px !important;
+            padding: 56px 16px 80px !important;
+            max-width: 420px !important;
             margin: 0 auto !important;
           }
           .options-grid {
@@ -3113,6 +3135,15 @@ export default function App() {
             text-align: center !important;
             gap: 16px !important;
           }
+          .word-card-header {
+            padding: 12px 14px !important;
+          }
+          .word-card-details {
+            padding: 12px 14px !important;
+          }
+          .word-card-example {
+            padding: 10px 12px !important;
+          }
         }
 
         @media (max-width: 500px) {
@@ -3134,17 +3165,6 @@ export default function App() {
           }
           .practice-row button {
             align-self: flex-end !important;
-          }
-          .hud-card {
-            padding: 16px 16px !important;
-          }
-          .countdown-seg-box {
-            padding: 12px 6px !important;
-            font-size: clamp(20px, 3.8vw, 32px) !important;
-          }
-          .countdown-colon {
-            font-size: 20px !important;
-            padding-bottom: 8px !important;
           }
         }
       `}</style>
